@@ -32,15 +32,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: hashicorp/setup-terraform@v3
-      - name: "Setup terraform"
+        name: "Setup terraform"
 
-      - name: init terraform
-      - run: |
+      - name: run terraform init
+        run: |
             cd terraform
             terraform init
 
-      - name: plan terraform
-      - run: |
+      - name: run terraform plan
+        run: |
             cd terraform
             terraform plan
 

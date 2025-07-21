@@ -31,6 +31,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "${local.prefix}-rg"
+  count = 2
+  name     = "${local.prefix}-rg-${count.index}"
   location = "East US"
 }
